@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        color: white;
+      }
+      body {
+        background-color: black;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      .MAIN {
+        width: auto;
+        height: auto;
+        z-index: 0;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 30vh;
+      }
+
+      .greeting {
+        font-size: 2em;
+        text-align: center;
+        h1 {
+          font-family: Quantico;
+          animation-name: greeting;
+          animation-duration: 3s;
+        }
+        /*Code for the links*/
+        ul {
+            animation-name: greeting;
+            animation-duration: 3s;
+          list-style: none;
+          display: flex;
+          justify-content: space-evenly;
+          padding: 0;
+          /* Code for hover effects*/
+          #home:hover {
+           font-size: 1.6em;
+            transform: translateY(-10px);
+            transition-duration: 500ms;
+          }
+          #project:hover {
+            font-size: 1.6em;
+            transform: translateY(-10px);
+            transition-duration: 500ms;
+          }
+          #Contact:hover {
+            font-size: 1.6em;
+            transform: translateY(-10px);
+            transition-duration: 500ms;
+          }
+        }
+      }
+
+      /* code for animation*/
+      @keyframes greeting {
+        from{
+            /*hides name and links when first opened*/
+            display: none;
+            opacity: 0;
+        }
+        /*code below is to start the fading process*/
+        80%{
+            opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="MAIN">
+
+      <div class="greeting">
+        <h1>Matthew Mendoza</h1>
+        <ul>
+          <li id="home"><a href="" target="_blank">Home</a></li>
+          <li id="project"><a href="" target="_blank">Projects</a></li>
+          <li id="Contact"><a href="" target="_blank">Contact</a></li>
+        </ul>
+      </div>
+
+      <footer>
+
+      </footer>
+    </div>
+  </body>
+</html>
