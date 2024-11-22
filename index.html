@@ -16,9 +16,11 @@
       ::after {
         box-sizing: border-box;
         color: white;
+        font-family: Quantico;
       }
       body {
         background-color: black;
+       
       }
       a:link {
         text-decoration: none;
@@ -33,42 +35,50 @@
         overflow-x: hidden;
         overflow-y: hidden;
         margin-top: 30vh;
+       
       }
 
       .greeting {
         font-size: 2em;
         text-align: center;
-        h1 {
-          font-family: Quantico;
-          animation-name: greeting;
-          animation-duration: 3s;
+        /* animation-name: greeting;
+        animation-duration: 4s; */
+
+        p{
+          padding-bottom: 20px;
         }
+
         /*Code for the links*/
         ul {
-            animation-name: greeting;
-            animation-duration: 3s;
           list-style: none;
           display: flex;
           justify-content: space-evenly;
           padding: 0;
-          /* Code for hover effects*/
+        }
+          /* Code for hover effects */
           #home:hover {
            font-size: 1.6em;
-            transform: translateY(-10px);
+           padding:0px 3px 0px 3px;
+            transform: translateY(-20px);
             transition-duration: 500ms;
           }
           #project:hover {
             font-size: 1.6em;
-            transform: translateY(-10px);
+            transform: translateY(-20px);
             transition-duration: 500ms;
           }
           #Contact:hover {
             font-size: 1.6em;
-            transform: translateY(-10px);
+            transform: translateY(-20px);
+            transition-duration: 500ms;
+          }
+          #About:hover{
+            font-size: 1.6em;
+            transform: translateY(-20px);
             transition-duration: 500ms;
           }
         }
-      }
+
 
       /* code for animation*/
       @keyframes greeting {
@@ -92,12 +102,15 @@
 
       <div class="greeting">
         <h1>Matthew Mendoza</h1>
+        <p>web developer</p>
         <ul>
           <li id="home"><a href="" target="_blank">Home</a></li>
           <li id="project"><a href="" target="_blank">Projects</a></li>
+          <li id="About"><a href="" target="_blank">About me</a></li>
           <li id="Contact"><a href="" target="_blank">Contact</a></li>
         </ul>
       </div>
+
 
       <footer>
 
