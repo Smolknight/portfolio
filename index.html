@@ -11,20 +11,21 @@
       rel="stylesheet"
     />
     <style>
-      *,
-      ::before,
-      ::after {
+      *,::before,::after {
         box-sizing: border-box;
         color: white;
         font-family: Quantico;
       }
+
       body {
         background-color: black;
-       
       }
+
       a:link {
         text-decoration: none;
       }
+      
+
       .MAIN {
         width: auto;
         height: auto;
@@ -34,8 +35,7 @@
         justify-content: center;
         overflow-x: hidden;
         overflow-y: hidden;
-        margin-top: 30vh;
-       
+        margin-top: 25vh; 
       }
 
       .greeting {
@@ -53,7 +53,7 @@
           list-style: none;
           display: flex;
           justify-content: space-evenly;
-          padding: 0;
+          padding: 0px 3px 0px 3px;
         }
           /* Code for hover effects */
           #home:hover {
@@ -78,7 +78,25 @@
             transition-duration: 500ms;
           }
         }
+        footer{
+          margin-top: 5em;
+          text-align: center;
+          /* animation-name: greeting;
+        animation-duration: 4s; */
+        }
 
+        /* Back ground animation*/
+        #Warn1st{
+          animation-name: scroll;
+          animation-duration: 2s;
+          position: absolute;
+        right: 50%;
+        bottom: 35%;
+        z-index: -1;
+        background-color: rgb(93, 186, 155);
+        color: black;
+        font-size: 5em;
+        }
 
       /* code for animation*/
       @keyframes greeting {
@@ -95,11 +113,26 @@
           opacity: 1;
         }
       }
+      @keyframes scroll{
+      
+      }
+
+      /*Media Query*/
+      @media (max-width: 426px){
+      ul{
+        flex-direction: column;
+      }
+      }
+
     </style>
   </head>
-  <body>
-    <div class="MAIN">
 
+  <body>
+
+  <div id="Warn1st">WARNING</div>
+
+    <div class="MAIN">
+      
       <div class="greeting">
         <h1>Matthew Mendoza</h1>
         <p>web developer</p>
@@ -107,14 +140,14 @@
           <li id="home"><a href="" target="_blank">Home</a></li>
           <li id="project"><a href="" target="_blank">Projects</a></li>
           <li id="About"><a href="" target="_blank">About me</a></li>
-          <li id="Contact"><a href="" target="_blank">Contact</a></li>
+          <li id="Contact"><a href="contact.html" target="_blank">Contact</a></li>
         </ul>
       </div>
 
-
-      <footer>
-
-      </footer>
     </div>
+
+    <footer>
+      <p>&copy;2024 Matthew Mendoza All rights reserved.</p>
+    </footer>
   </body>
 </html>
