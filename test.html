@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Text Effect</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.scrolling-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    overflow: hidden; /* Hide anything outside the container */
+    background-color: yellow; /* Idle yellow background */
+    padding: 10px 0;
+}
+
+.scrolling-text {
+    white-space: nowrap; /* Prevent line breaks */
+    font-size: 24px;
+    color: black; /* Black text color for contrast */
+    margin: 0;
+    animation: scroll 5s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%); /* Start off-screen from the right */
+    }
+    100% {
+        transform: translateX(100%); /* End off-screen to the left */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="scrolling-container">
+        <p class="scrolling-text">This is a scrolling text effect using CSS keyframes!</p>
+    </div>
+</body>
+</html>

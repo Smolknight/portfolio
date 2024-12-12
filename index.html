@@ -11,10 +11,13 @@
       rel="stylesheet"
     />
     <style>
-      *,::before,::after {
+      *,
+      ::before,
+      ::after {
         box-sizing: border-box;
         color: white;
         font-family: Quantico;
+        overflow-x: hidden;
       }
 
       body {
@@ -24,7 +27,6 @@
       a:link {
         text-decoration: none;
       }
-      
 
       .MAIN {
         width: auto;
@@ -33,9 +35,7 @@
         display: flex;
         align-content: center;
         justify-content: center;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        margin-top: 25vh; 
+        margin-top: 25vh;
       }
 
       .greeting {
@@ -44,7 +44,7 @@
         /* animation-name: greeting;
         animation-duration: 4s; */
 
-        p{
+        p {
           padding-bottom: 20px;
         }
 
@@ -55,95 +55,131 @@
           justify-content: space-evenly;
           padding: 0px 3px 0px 3px;
         }
-          /* Code for hover effects */
-          #home:hover {
-           font-size: 1.6em;
-           padding:0px 3px 0px 3px;
-            transform: translateY(-20px);
-            transition-duration: 500ms;
-          }
-          #project:hover {
-            font-size: 1.6em;
-            transform: translateY(-20px);
-            transition-duration: 500ms;
-          }
-          #Contact:hover {
-            font-size: 1.6em;
-            transform: translateY(-20px);
-            transition-duration: 500ms;
-          }
-          #About:hover{
-            font-size: 1.6em;
-            transform: translateY(-20px);
-            transition-duration: 500ms;
-          }
+        /* Code for hover effects, this are active when the links are hovered over */
+        #home:hover {
+          font-size: 1.6em;
+          padding: 0px 5px 0px 5px;
+          transform: translateY(-20px);
+          transition-duration: 500ms;
         }
-        footer{
-          margin-top: 5em;
-          text-align: center;
-          /* animation-name: greeting;
+        #project:hover {
+          font-size: 1.6em;
+          transform: translateY(-20px);
+          transition-duration: 500ms;
+        }
+        #Contact:hover {
+          font-size: 1.6em;
+          transform: translateY(-20px);
+          transition-duration: 500ms;
+        }
+        #About:hover {
+          font-size: 1.6em;
+          transform: translateY(-20px);
+          transition-duration: 500ms;
+        }
+      }
+      footer {
+        text-align: center;
+        /* animation-name: greeting;
         animation-duration: 4s; */
-        }
+      }
 
-        /* Back ground animation*/
-        #Warn1st{
-          animation-name: scroll;
-          animation-duration: 2s;
-          position: absolute;
-        right: 50%;
-        bottom: 35%;
+      .scrollBg1 {
         z-index: -1;
-        background-color: rgb(93, 186, 155);
-        color: black;
-        font-size: 5em;
-        }
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        background-color: rgb(255, 0, 0);
+        opacity: 0.7;
+      }
+      .scrollBg2 {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        background-color: rgb(0, 0, 255);
+        opacity: 0.7;
+        transform: rotate(100deg);
+      }
+
+      /* Back ground animation*/
+      #scrollOne {
+        animation-name: scroll;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        margin: 0;
+        color: white;
+        font-size: 3em;
+        word-spacing: 1.5em;
+      }
+      #scrollTwo {
+        animation-name: scroll;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        margin: 0;
+        color: white;
+        font-size: 3em;
+        word-spacing: 1.5em;
+      }
 
       /* code for animation*/
       @keyframes greeting {
-        from{
-            /*hides name and links when first opened*/
-            display: none;
-            opacity: 0;
+        from {
+          /*hides name and links when first opened*/
+          display: none;
+          opacity: 0;
         }
         /*code below is to start the fading process*/
-        80%{
-            opacity: 0;
+        80% {
+          opacity: 0;
         }
-        100%{
+        100% {
           opacity: 1;
         }
       }
-      @keyframes scroll{
-      
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(-100%); /* Start off-screen from the right */
+        }
+        100% {
+          transform: translateX(100%); /* End off-screen to the left */
+        }
       }
 
       /*Media Query*/
-      @media (max-width: 426px){
-      ul{
-        flex-direction: column;
+      @media (max-width: 508px) {
+        ul {
+          flex-direction: column;
+        }
       }
-      }
-
     </style>
   </head>
 
   <body>
+    <div class="scrollBg1">
+      <p id="scrollOne">HTML CSS JavaScript</p>
+    </div>
 
-  <div id="Warn1st">WARNING</div>
+    <div class="scrollBg2">
+      <p id="scrollTwo">HTML CSS JavaScript</p>
+    </div>
 
     <div class="MAIN">
-      
       <div class="greeting">
         <h1>Matthew Mendoza</h1>
         <p>web developer</p>
         <ul>
-          <li id="home"><a href="" target="_blank">Home</a></li>
-          <li id="project"><a href="" target="_blank">Projects</a></li>
-          <li id="About"><a href="" target="_blank">About me</a></li>
-          <li id="Contact"><a href="contact.html" target="_blank">Contact</a></li>
+          <li id="home"><a href="" target="_self">Home</a></li>
+          <li id="project"><a href="" target="_self">Projects</a></li>
+          <li id="About"><a href="" target="_self">About me</a></li>
+          <li id="Contact">
+            <a href="contact.html" target="_self">Contact</a>
+          </li>
         </ul>
       </div>
-
     </div>
 
     <footer>
