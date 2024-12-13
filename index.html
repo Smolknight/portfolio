@@ -15,157 +15,71 @@
       ::before,
       ::after {
         box-sizing: border-box;
-        color: white;
+        margin: 0 auto;
         font-family: Quantico;
         overflow-x: hidden;
       }
-
       body {
-        background-color: black;
+        display: flex;
+        height: 90vh;
+        align-items: center;
+        /* background-color: black; */
       }
-
       a:link {
         text-decoration: none;
       }
-
-      .MAIN {
-        width: auto;
-        height: auto;
-        z-index: 0;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        margin-top: 25vh;
-      }
-
       .greeting {
         font-size: 2em;
         text-align: center;
-        /* animation-name: greeting;
-        animation-duration: 4s; */
-
-        p {
-          padding-bottom: 20px;
-        }
-
-        /*Code for the links*/
-        ul {
-          list-style: none;
-          display: flex;
-          justify-content: space-evenly;
-          padding: 0px 3px 0px 3px;
-        }
-        /* Code for hover effects, this are active when the links are hovered over */
-        #home:hover {
-          font-size: 1.6em;
-          padding: 0px 5px 0px 5px;
-          transform: translateY(-20px);
-          transition-duration: 500ms;
-        }
-        #project:hover {
-          font-size: 1.6em;
-          transform: translateY(-20px);
-          transition-duration: 500ms;
-        }
-        #Contact:hover {
-          font-size: 1.6em;
-          transform: translateY(-20px);
-          transition-duration: 500ms;
-        }
-        #About:hover {
-          font-size: 1.6em;
-          transform: translateY(-20px);
-          transition-duration: 500ms;
-        }
       }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0px 3px 0px 3px;
+        height: 2.5em;
+      }
+      /* Code for hover effects, this are active when the links are hovered over */
+      #home:hover {
+        font-size: 1.6em;
+        padding: 0px 10px 0px 10px;
+        transform: translateY(-10px);
+        transition-duration: 500ms;
+      }
+      #project:hover {
+        font-size: 1.6em;
+        padding: 0px 10px 0px 10px;
+        transform: translateY(-10px);
+        transition-duration: 500ms;
+      }
+      #Contact:hover {
+        font-size: 1.6em;
+        padding: 0px 10px 0px 10px;
+        transform: translateY(-10px);
+        transition-duration: 500ms;
+      }
+      #About:hover {
+        font-size: 1.6em;
+        padding: 0px 10px 0px 10px;
+        transform: translateY(-10px);
+        transition-duration: 500ms;
+      }
+
       footer {
         text-align: center;
-        /* animation-name: greeting;
-        animation-duration: 4s; */
-      }
-
-      .scrollBg1 {
-        z-index: -1;
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        background-color: rgb(255, 0, 0);
-        opacity: 0.7;
-      }
-      .scrollBg2 {
-        z-index: -1;
-        position: absolute;
-        width: 100%;
-        top: 40%;
-        background-color: rgb(0, 0, 255);
-        opacity: 0.7;
-        transform: rotate(100deg);
-      }
-
-      /* Back ground animation*/
-      #scrollOne {
-        animation-name: scroll;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        margin: 0;
-        color: white;
-        font-size: 3em;
-        word-spacing: 1.5em;
-      }
-      #scrollTwo {
-        animation-name: scroll;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        margin: 0;
-        color: white;
-        font-size: 3em;
-        word-spacing: 1.5em;
-      }
-
-      /* code for animation*/
-      @keyframes greeting {
-        from {
-          /*hides name and links when first opened*/
-          display: none;
-          opacity: 0;
-        }
-        /*code below is to start the fading process*/
-        80% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-      @keyframes scroll {
-        0% {
-          transform: translateX(-100%); /* Start off-screen from the right */
-        }
-        100% {
-          transform: translateX(100%); /* End off-screen to the left */
-        }
-      }
-
-      /*Media Query*/
-      @media (max-width: 508px) {
-        ul {
-          flex-direction: column;
-        }
+        font-size: 1.5em;
       }
     </style>
   </head>
 
   <body>
-    <div class="scrollBg1">
-      <p id="scrollOne">HTML CSS JavaScript</p>
+    <!-- <div class="scrollBg1">
+      <p id="scrollOne">CSS</p>
     </div>
 
     <div class="scrollBg2">
-      <p id="scrollTwo">HTML CSS JavaScript</p>
-    </div>
+      <p id="scrollTwo">HTML</p>
+    </div> -->
 
     <div class="MAIN">
       <div class="greeting">
@@ -180,10 +94,10 @@
           </li>
         </ul>
       </div>
-    </div>
 
-    <footer>
-      <p>&copy;2024 Matthew Mendoza All rights reserved.</p>
-    </footer>
+      <footer>
+        <p>&copy;2024 Matthew Mendoza All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>
