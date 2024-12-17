@@ -18,12 +18,13 @@
         margin: 0 auto;
         font-family: Quantico;
         overflow-x: hidden;
+        color: white;
       }
       body {
         display: flex;
         height: 90vh;
         align-items: center;
-        /* background-color: black; */
+        background-color: black;
       }
       a:link {
         text-decoration: none;
@@ -31,55 +32,127 @@
       .greeting {
         font-size: 2em;
         text-align: center;
+        justify-content: center;
       }
       ul {
         list-style: none;
         display: flex;
-        justify-content: space-evenly;
-        padding: 0px 3px 0px 3px;
+        align-items: center;
         height: 2.5em;
-      }
+        padding: 0;
+      
       /* Code for hover effects, this are active when the links are hovered over */
       #home:hover {
         font-size: 1.6em;
         padding: 0px 10px 0px 10px;
-        transform: translateY(-10px);
+        transform: translateY(-15px);
         transition-duration: 500ms;
       }
       #project:hover {
         font-size: 1.6em;
         padding: 0px 10px 0px 10px;
-        transform: translateY(-10px);
+        transform: translateY(-15px);
         transition-duration: 500ms;
       }
       #Contact:hover {
         font-size: 1.6em;
         padding: 0px 10px 0px 10px;
-        transform: translateY(-10px);
+        transform: translateY(-15px);
         transition-duration: 500ms;
       }
       #About:hover {
         font-size: 1.6em;
         padding: 0px 10px 0px 10px;
-        transform: translateY(-10px);
+        transform: translateY(-15px);
         transition-duration: 500ms;
       }
+    }
+
+
+
+
+
+    .scrollBg1 {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  background-color: rgb(255, 0, 0);
+  opacity: 0.7;
+}
+
+
+.scrollBg2 { 
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  background-color: rgb(0, 0, 255);
+  opacity: 0.7;
+}
+
+#scrollOne {
+  animation-name: scroll;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin: 0;
+  color: white;
+  font-size: 3em;
+  word-spacing: 1.5em;
+}
+#scrollTwo {
+  animation-name: scroll;
+  animation-duration: 8s;
+  animation-delay:0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin: 0;
+  color: white;
+  font-size: 3em;
+  word-spacing: 1.5em;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%); /* Start off-screen from the right */
+  }
+  100% {
+    transform: translateX(100%); /* End off-screen to the left */
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%); /* Start off-screen from the right */
+  }
+  100% {
+    transform: translateX(100%); /* End off-screen to the left */
+  }
+}
 
       footer {
         text-align: center;
         font-size: 1.5em;
       }
+
+@media (max-width:485px){
+  ul{
+    flex-direction: column;
+    height: 20vh;
+  }
+}
     </style>
   </head>
 
   <body>
-    <!-- <div class="scrollBg1">
+    <div class="scrollBg1">
       <p id="scrollOne">CSS</p>
     </div>
 
     <div class="scrollBg2">
       <p id="scrollTwo">HTML</p>
-    </div> -->
+    </div>
 
     <div class="MAIN">
       <div class="greeting">
@@ -96,7 +169,7 @@
       </div>
 
       <footer>
-        <p>&copy;2024 Matthew Mendoza All rights reserved.</p>
+        <p>&copy;2024 Matthew Mendoza All rights reserved</p>
       </footer>
     </div>
   </body>
