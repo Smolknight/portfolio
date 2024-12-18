@@ -16,32 +16,48 @@
       ::after {
         font-family: Quantico;
         box-sizing: border-box;
+        color: white;
+      }
+      body{
+        background-color: black;
       }
       .main {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
         height: 100vh;
+        display: grid;
+        grid-template-columns: 30% 70%;
       }
-      .Contact-Info {
-        h1 {
-          text-align: center;
-        }
+      .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+      .images{
+        display: flex;
+        justify-content: center;
+      }
+      .icon{
+        height: 7.644em;
+      }
+    
     </style>
   </head>
   <body>
     <div class="main">
-      <div class="Contact-Info">
-        <h1>Contact Info</h1>
-        <ul>
-          <li>kwjnfiwenin</li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+
+      <div class="images">
+        <img class="icon" id="gmail" src="Gmail_icon_(2020).svg" alt="gmail icon" onclick="displayAddress()">
+        <button onclick="displayAddress()">qw</button>
       </div>
 
-      <div class="form"></div>
+      <div class="text">
+        <p id="socialAdress">kdwom</p>
+      </div>
+      <script>
+        function displayAddress(){
+          var gmail= document.getElementById("gmail")
+          gmail.innerHTML= "<p>qk oq pedmqomdoqomqkmwokowoq o wd qojwd </p>"
+        }
+      </script>
     </div>
   </body>
 </html>
