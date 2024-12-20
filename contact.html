@@ -1,63 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      *,
-      ::before,
-      ::after {
-        font-family: Quantico;
-        box-sizing: border-box;
-        color: white;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+  <style>
+    *,::before,::after{
+      box-sizing: border-box;
+      font-family: Quantico, Arial, Helvetica, sans-serif;
+      color: white;
+      margin: 0 auto;
+    }
+    body{
+      background-color: black;
+    }
+    a:link{
+      text-decoration: none;
+    }
+    nav{
+      display: flex;
+      justify-content: space-between;
+      li{
+        list-style: none;
+        font-size: 2em;
       }
-      body{
-        background-color: black;
-      }
-      .main {
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 30% 70%;
-      }
-      .text{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .images{
-        display: flex;
-        justify-content: center;
-      }
-      .icon{
-        height: 7.644em;
-      }
-    
-    </style>
-  </head>
-  <body>
+    }
+    .main{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      height: 90vh;
+    }
+    .contactForm{
+      border: 5px white solid;
+      width: 50%;
+      height: 30vh;
+    }
+    label{
+      font-size: 1.5em;
+    }
+    input{
+      background-color: black;
+      width: 80%;
+      box-shadow: 2px 2px 2px 2px white;
+    }
+    textarea{
+      width: 100%;
+      background-color: black;
+      box-shadow: 2px 2px 2px 2px white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <li id="About"><a href="" target="_self">About me</a></li>
+    <li id="project"><a href="" target="_self">Projects</a></li>
+    <li id="home"><a href="" target="_self">Home</a></li>
+  </nav>
+
     <div class="main">
+        <div class="contactForm">
+         <form>
+          <div class="formContain">
+          <label for="name">name</label>
+          <br>
+          <input type="text" id="name" name="name" required>
+          </div>
 
-      <div class="images">
-        <img class="icon" id="gmail" src="Gmail_icon_(2020).svg" alt="gmail icon" onclick="displayAddress()">
-        <button onclick="displayAddress()">qw</button>
-      </div>
+          <br>
 
-      <div class="text">
-        <p id="socialAdress">kdwom</p>
-      </div>
-      <script>
-        function displayAddress(){
-          var gmail= document.getElementById("gmail")
-          gmail.innerHTML= "<p>qk oq pedmqomdoqomqkmwokowoq o wd qojwd </p>"
-        }
-      </script>
+          <div class="formContain">
+          <label for="subject">subject</label>
+          <br>
+          <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <br>
+
+          <div class="formContain">
+          <label for="message">subject</label>
+          <br>
+          <textarea id="message" name="message"></textarea>
+          </div>
+         </form>
+        </div>
     </div>
-  </body>
+</body>
 </html>
