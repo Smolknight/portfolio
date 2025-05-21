@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            gap: 10px;
+        }
+        .container{
+            display: flex;
+            width: 25%;
+            height: 15vh;
+            color: wheat;
+            border: 5px wheat solid;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+<script>
+    const projects=[
+        {
+            name:'Age Calculator',
+            link:'ageCalc.html'
+        },
+        {
+            name:'Cee-lo (game project)',
+            link:'https://smolknight.github.io/cee-lo/'
+        },
+        {
+            name:'BookStore inventory',
+            link:'https://smolknight.github.io/BookStoreManage/'
+        },
+        {
+            name:'Budget Planner',
+            link:'https://smolknight.github.io/budgetPlan_ObjectEdition/'
+        },
+        {
+            name:'task manager',
+            link:'https://smolknight.github.io/task-manager/'
+        }
+    ]
+    projects.forEach((project)=>{
+        let container=document.createElement('div')
+        container.className='container'
+        document.body.appendChild(container)
+
+        let title=document.createElement('h1')
+        title.innerText=`${project.name}`
+        container.appendChild(title)
+
+        container.addEventListener('click',function(){
+        window.open(`${project.link}`,'_blank')
+    })
+    })
+</script>
